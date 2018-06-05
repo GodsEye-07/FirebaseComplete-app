@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController,UITextFieldDelegate {
 
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -19,35 +19,51 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         uiUpdates()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
 
     }
     
     @IBAction func LoginButtonPressed(_ sender: Any) {
         
-        if emailTextField.text == "" || passwordTextField.text = ""{
-            
-            alert(message: "Some of the fileld are enpty", buttonMessage: "OK")
+        if emailTextField.text == "" {
+            alert(message: "Please enter the Email ID to continue.", buttonMessage: "OK")
+        }
+        else if passwordTextField.text == ""{
+            alert(message: "Please enter the password to continue.", buttonMessage: "OK")
         }
         
-        
+     
     }
-    
-    
-    
+
     func uiUpdates(){
         loginButton.layer.cornerRadius = loginButton.frame.size.height/2
-        
     }
-    
-    
-    
-    
+
     func alert(message :String, buttonMessage : String)  {
         
-        let alert = UIAlertController(title: "ALert", message:message, preferredStyle: .alert)
-        let button = UIAlertAction(title: buttonMessage, style: .cancel, handler: nil)
+        let alertView = UIAlertController(title: "ALERT", message:message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: buttonMessage, style: .cancel, handler: nil)
+        alertView.addAction(okButton)
         
+        present(alertView, animated: true, completion: nil)
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailTextField{
+            passwordTextField.becomeFirstResponder()
+        }
+        else if textField == passwordTextField{
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+    
+    
     
 
 }
