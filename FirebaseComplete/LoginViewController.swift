@@ -65,7 +65,22 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     }
     
     
-    
+    func login(){
+        
+        guard let email = emailTextField.text else {return}
+        guard let pass = passwordTextField.text else {return}
+        
+        
+        Auth.auth().signIn(withEmail: email, password: pass){user, error in
+            if error == nil && user != nil {
+                self.performSegue(withIdentifier: "toHomeFromLogin", sender: nil)
+            }
+            else{
+                print("error is : \(String(describing: error?.localizedDescription))")
+            }
+        }
+        
+    }
     
     
     

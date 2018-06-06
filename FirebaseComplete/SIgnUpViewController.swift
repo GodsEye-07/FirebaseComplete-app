@@ -52,8 +52,6 @@ class SIgnUpViewController: UIViewController ,UITextFieldDelegate{
         confirmPasswordTextField.delegate = self
         
         signupButton.layer.cornerRadius = signupButton.layer.frame.size.height/2
-        
-        
     }
     
     func passwordMatching_And_EmptyTextField(){
@@ -73,14 +71,15 @@ class SIgnUpViewController: UIViewController ,UITextFieldDelegate{
             let alert  = UIAlertController(title: "Enter the details.", message: "No details have been entered for the Signup.", preferredStyle: .alert)
             let okbutton = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
             alert.addAction(okbutton)
-            self.present(alert, animated: true, completion: nil)
+            self.present(alert, animated: true) {
+                self.emailTextField.becomeFirstResponder()
+            }
         }
         
     }
     
     @IBAction func signUpButtonPressed(_ sender: Any) {
-        
-        
+  
         guard let email = emailTextField.text else {return}
         guard let pass = passwordTextField.text else{return}
         
@@ -94,7 +93,6 @@ class SIgnUpViewController: UIViewController ,UITextFieldDelegate{
         }
         
         passwordMatching_And_EmptyTextField()
-        
     }
     
     
