@@ -19,6 +19,8 @@
 		2A8338FC20CB0081000B2E56 /* CallTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8338FB20CB0081000B2E56 /* CallTableViewCell.swift */; };
 		2AE0A59620C83F2700E4F208 /* SIgnUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE0A59520C83F2700E4F208 /* SIgnUpViewController.swift */; };
 		2AE0A59820C8558B00E4F208 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE0A59720C8558B00E4F208 /* ChatsViewController.swift */; };
+		2AF7BE5320CC3481009E8A7B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7BE5220CC3481009E8A7B /* SettingsViewController.swift */; };
+		2AF7BE5520CC374E009E8A7B /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7BE5420CC374E009E8A7B /* SettingsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		2A8338FB20CB0081000B2E56 /* CallTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallTableViewCell.swift; sourceTree = "<group>"; };
 		2AE0A59520C83F2700E4F208 /* SIgnUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIgnUpViewController.swift; sourceTree = "<group>"; };
 		2AE0A59720C8558B00E4F208 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
+		2AF7BE5220CC3481009E8A7B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		2AF7BE5420CC374E009E8A7B /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		475D30A01C731D43F380F3B1 /* Pods-FirebaseComplete.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseComplete.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseComplete/Pods-FirebaseComplete.debug.xcconfig"; sourceTree = "<group>"; };
 		F1A247278D4D9C1695D828F0 /* Pods-FirebaseComplete.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseComplete.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseComplete/Pods-FirebaseComplete.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +70,7 @@
 			children = (
 				2A02B28020C54C2A0086CF8A /* LoginViewController.swift */,
 				2AE0A59520C83F2700E4F208 /* SIgnUpViewController.swift */,
+				2AF7BE5620CC3765009E8A7B /* SettingsViewController */,
 				2A8338FD20CB0087000B2E56 /* CallViewController */,
 				2A8338F820CAF4EB000B2E56 /* chatsViewController */,
 			);
@@ -120,6 +125,15 @@
 				2A8338FB20CB0081000B2E56 /* CallTableViewCell.swift */,
 			);
 			path = CallViewController;
+			sourceTree = "<group>";
+		};
+		2AF7BE5620CC3765009E8A7B /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2AF7BE5420CC374E009E8A7B /* SettingsTableViewCell.swift */,
+				2AF7BE5220CC3481009E8A7B /* SettingsViewController.swift */,
+			);
+			path = SettingsViewController;
 			sourceTree = "<group>";
 		};
 		D352B25218A1449A3E08DB01 /* Frameworks */ = {
@@ -251,11 +265,13 @@
 			files = (
 				2A8338FC20CB0081000B2E56 /* CallTableViewCell.swift in Sources */,
 				2A8338FA20CB0074000B2E56 /* CallViewController.swift in Sources */,
+				2AF7BE5520CC374E009E8A7B /* SettingsTableViewCell.swift in Sources */,
 				2A02B28120C54C2A0086CF8A /* LoginViewController.swift in Sources */,
 				2A748D8720C49076006FA868 /* AppDelegate.swift in Sources */,
 				2AE0A59820C8558B00E4F208 /* ChatsViewController.swift in Sources */,
 				2AE0A59620C83F2700E4F208 /* SIgnUpViewController.swift in Sources */,
 				2A8338F720CAF4E0000B2E56 /* chatsTableViewCell.swift in Sources */,
+				2AF7BE5320CC3481009E8A7B /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

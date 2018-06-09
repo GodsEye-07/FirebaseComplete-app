@@ -48,14 +48,12 @@ class ChatsViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         cell.timeLabel.text = "10:45 PM"
         cell.profileImageView.layer.cornerRadius = cell.profileImageView.frame.size.height/2
         
-        tableView.separatorInset.left = 100.0
-        
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 80
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
