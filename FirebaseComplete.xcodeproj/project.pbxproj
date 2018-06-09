@@ -130,8 +130,8 @@
 		2AF7BE5620CC3765009E8A7B /* SettingsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2AF7BE5420CC374E009E8A7B /* SettingsTableViewCell.swift */,
 				2AF7BE5220CC3481009E8A7B /* SettingsViewController.swift */,
+				2AF7BE5420CC374E009E8A7B /* SettingsTableViewCell.swift */,
 			);
 			path = SettingsViewController;
 			sourceTree = "<group>";
